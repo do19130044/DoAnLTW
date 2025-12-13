@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
-         version="6.0">
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+  http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <welcome-file-list>
+    <welcome-file>home</welcome-file>
+  </welcome-file-list>
+
+  <session-config>
+<!--    <tracking-mode>URL</tracking-mode>-->
+    <session-timeout>30</session-timeout> <!-- Session timeout in minutes -->
+<!--    <tracking-mode>URL</tracking-mode>-->
+
+  </session-config>
+<!--  <servlet-mapping>-->
+<!--    <servlet-name>default</servlet-name>-->
+<!--    <url-pattern>/img/*</url-pattern> &lt;!&ndash; Đảm bảo rằng servlet sẽ phục vụ các tệp trong thư mục img &ndash;&gt;-->
+<!--  </servlet-mapping>-->
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+    <param-value>resources.messages</param-value>
+  </context-param>
+
+
 </web-app>

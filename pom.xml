@@ -17,6 +17,7 @@
     <junit.version>5.11.0</junit.version>
   </properties>
 
+
   <dependencies>
 <dependency>
       <groupId>jakarta.servlet</groupId>
@@ -24,7 +25,13 @@
       <version>6.1.0</version>
       <scope>provided</scope>
     </dependency>
-<dependency>
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>jstl</artifactId>
+          <version>1.2</version>
+      </dependency>
+
+      <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.version}</version>

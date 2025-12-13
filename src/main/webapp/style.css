@@ -1,0 +1,476 @@
+body, html {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+footer p, footer a {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+footer a:hover {
+    color: #fff;
+}
+/* Hiệu ứng di chuột lên sản phẩm */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+#loginSidebar.active, #registerSidebar.active {
+    right: 0;
+}
+
+.closeSidebar {
+    margin-top: 20px;
+}
+
+/* Navbar Hover Effects */
+.navbar-nav .nav-item .nav-link {
+    transition: color 0.3s, text-shadow 0.3s, box-shadow 0.3s;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color: #ff2600;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dropdown hover effect */
+.dropdown-item {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #ff2600;
+    color: #fff;
+}
+
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.card .form-label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.card .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* .card .btn-primary {
+    background-color: #ff2600;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+} */
+.btn-primary {
+    background-color: rgb(34, 34, 32);
+    color:#eed7d7 ;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* .card .btn-primary:hover {
+    background-color: #ff2600;
+} */
+.btn-primary:hover {
+    background-color: #ff2600;
+}
+
+.card p {
+    text-align: center;
+    margin-top: 10px;
+}
+.btn i {
+    margin-right: 8px;
+    transition: transform 0.3s;
+}
+
+.btn:hover i {
+    transform: scale(1.2);
+}
+
+.nav-link i {
+    margin-right: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link:hover i {
+    color: #ff2600;
+    transform: scale(1.1);
+}
+
+.dropdown-item i {
+    margin-right: 5px;
+}
+/* General header and navbar styles */
+header {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+    color: #ff2600;
+}
+
+/* Navbar items */
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 6px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff2600;
+    transform: scale(1.1);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #ff2600;
+}
+
+/* Cart icon */
+.navbar-nav .badge {
+    font-size: 0.8rem;
+    vertical-align: top;
+    margin-left: 4px;
+}
+
+/* Hover effects for the dropdown */
+.nav-item .dropdown-toggle::after {
+    margin-left: 6px;
+}
+
+.dropdown-item:hover i {
+    color: #ff2600;
+    transform: scale(1.1);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        padding: 10px;
+        text-align: center;
+    }
+}
+/* Search bar styling */
+.search-bar {
+    max-width: 400px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.search-bar .form-control {
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.search-bar .btn {
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+/* Add hover effect to the search button */
+.search-bar .btn:hover i {
+    color: #ebd7d3;
+    transform: scale(1.1);
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Navbar items */
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #343a40;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 6px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Cart icon */
+.navbar-nav .badge {
+    font-size: 0.8rem;
+    vertical-align: top;
+    margin-left: 4px;
+}
+
+/* Hover effects for the dropdown */
+.nav-item .dropdown-toggle::after {
+    margin-left: 6px;
+}
+
+.dropdown-item:hover i {
+    color: #ff2600;
+    transform: scale(1.1);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* Login & Register Pages Styles */
+.login-page, .register-page {
+    background-color: #f0f2f5;
+    height: 90vh;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chỉ hiển thị menu Quản lý Đơn hàng khi hover vào Quản lý */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Đảm bảo không bị lệch */
+}
+html, body {
+    height: 100%; /* Đảm bảo chiều cao của html và body là 100% của cửa sổ trình duyệt */
+    margin: 0;    /* Loại bỏ margin mặc định của trình duyệt */
+}
+
+/* Body sẽ sử dụng flexbox để sắp xếp các phần tử theo chiều dọc */
+body {
+    display: flex;           /* Sử dụng Flexbox cho body */
+    flex-direction: column;  /* Các phần tử con của body sẽ xếp theo chiều dọc */
+    min-height: 100vh;       /* Đảm bảo chiều cao của body chiếm 100% chiều cao cửa sổ trình duyệt */
+}
+
+/* Nội dung chính sẽ chiếm không gian còn lại */
+.content {
+    flex: 1; /* Nội dung chính sẽ chiếm phần không gian còn lại trong body */
+}
+
+/* Footer sẽ luôn ở dưới cùng của trang */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Đảm bảo footer luôn ở dưới cùng */
+}
+/* Form tìm kiếm */
+.search-form {
+    max-width: 800px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.sort-select {
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 30%;
+    transition: border 0.3s ease;
+}
+
+
+
+
+.search-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Hover hiệu ứng cho các phần tử trong form */
+.search-form input[type="text"]:hover,
+.search-form select:hover,
+.search-form input[type="submit"]:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-input,
+    .sort-select {
+        width: auto; /* Để tự động mở rộng theo nội dung */
+        min-width: 250px; /* Đảm bảo chiều rộng tối thiểu để chứa các lựa chọn */
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border 0.3s ease;
+        background-color: white;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+}
