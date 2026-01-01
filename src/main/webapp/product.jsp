@@ -24,7 +24,7 @@
     }
 
     .card img {
-        object-fit: cover;
+        object-fit: contain;
         height: 200px; /* Cố định chiều cao cho ảnh để đồng đều */
     }
 
