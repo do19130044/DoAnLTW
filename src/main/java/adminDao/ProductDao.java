@@ -95,6 +95,22 @@ public class ProductDao {
         }
         return product;
     }
+    // Xóa Sản Phẩm
+    public boolean deleteProduct(int productId) {
+        String sql = "DELETE FROM product WHERE product_id = ?";
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, productId);
+            return ps.executeUpdate() > 0;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 
     // Cập nhật sản phẩm
     public boolean updateProduct(Product product) {

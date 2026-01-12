@@ -17,7 +17,7 @@ public class SendEmailUtil {
 
     public static void sendPasswordResetEmail(String toEmail, String resetLink) throws IOException {
         // Địa chỉ email đã được xác minh trong SendGrid
-        Email from = new Email("huynguyen1723@gmail.com");
+        Email from = new Email("vtdvothanhdoa4@gmail.com");
         String subject = "Password Reset Request";
         Email to = new Email(toEmail);
         Content content = new Content("text/plain", "Please reset your password by clicking the following link: " + resetLink);

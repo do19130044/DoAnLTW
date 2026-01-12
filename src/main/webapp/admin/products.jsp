@@ -58,6 +58,16 @@
                             '${product.description}', '${product.category}', ${product.discountPercentage},
                             ${product.stock}, '${product.imagePath}' )">Sửa</button>
                 </td>
+                <!--nút xóa-->
+                <td>
+                    <button type="button"
+                            class="btn btn-danger btn-sm"
+                            onclick="deleteProduct(${product.productId})">
+                        Xóa
+                    </button>
+
+
+                </td>
             </tr>
         </c:forEach>
         </tbody>
@@ -89,59 +99,63 @@
 
 </div>
 
-<!-- Modal Thêm Sản Phẩm -->
-<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addProductModalLabel">Thêm Sản Phẩm</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="addProductForm" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="productName" class="form-label">Tên sản phẩm</label>
-                        <input type="text" class="form-control" id="productName" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="productPrice" class="form-label">Giá</label>
-                        <input type="number" class="form-control" id="productPrice" name="price" value="1" min="1"required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="productDescription" class="form-label">Mô tả</label>
-                        <textarea class="form-control" id="productDescription" name="description" required></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="productCategory" class="form-label">Danh mục</label>
-                        <select class="form-control" id="productCategory" name="category" required>
-                            <option value="Laptop">Laptop</option>
-                            <option value="Phone">Phone</option>
-                            <option value="Tablet">Tablet</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="productImage" class="form-label">Ảnh sản phẩm</label>
-                        <input type="file" class="form-control" id="productImage" name="image" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="discountPercentage" class="form-label">Giảm giá (%)</label>
-                        <input type="number" step="0.01" class="form-control" id="discountPercentage" name="discountPercentage"value="1" min="1"required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="stock" class="form-label">Số lượng</label>
-                        <input type="number" class="form-control" id="stock" name="stock" value="1" min="1"required>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary" onclick="saveProduct()" >Lưu</button>
-            </div>
-        </div>
-    </div>
-</div>
+      <!-- Modal Thêm Sản Phẩm -->
+      <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="addProductModalLabel">Thêm Sản Phẩm</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form id="addProductForm" enctype="multipart/form-data">
+                          <div class="mb-3">
+                              <label for="productName" class="form-label">Tên sản phẩm</label>
+                              <input type="text" class="form-control" id="productName" name="name" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="productPrice" class="form-label">Giá</label>
+                              <input type="number" class="form-control" id="productPrice" name="price" value="1" min="1"required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="productDescription" class="form-label">Mô tả</label>
+                              <textarea class="form-control" id="productDescription" name="description" required></textarea>
+                          </div>
+                          <%--                    <div class="mb-3">--%>
+                          <%--                        <label for="productCategory" class="form-label">Danh mục</label>--%>
+                          <%--                        <input type="text" class="form-control" id="productCategory" name="category" required>--%>
+                          <%--                    </div>--%>
+                          <div class="mb-3">
+                              <label for="productCategory" class="form-label">Danh mục</label>
+                              <select class="form-control" id="productCategory" name="category" required>
+                                  <option value="Laptop">Laptop</option>
+                                  <option value="Phone">Phone</option>
+                                  <option value="Tablet">Tablet</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                              <label for="productImage" class="form-label">Ảnh sản phẩm</label>
+                              <input type="file" class="form-control" id="productImage" name="image" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="discountPercentage" class="form-label">Giảm giá (%)</label>
+                              <input type="number" step="0.01" class="form-control" id="discountPercentage" name="discountPercentage"value="1" min="1"required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="stock" class="form-label">Số lượng</label>
+                              <input type="number" class="form-control" id="stock" name="stock" value="1" min="1"required>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                      <button type="button" class="btn btn-primary" onclick="saveProduct()" >Lưu</button>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-<!-- Modal Sửa Sản Phẩm -->
+      <!-- Modal Sửa Sản Phẩm -->
 <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -257,11 +271,7 @@
         return isValid;
     }
 
-    // function saveProduct() {
-    //     if (validateForm()) {
-    //         // Nếu form hợp lệ, gửi form đi
-    //     }
-    // }
+
     function validateForm2() {
         const productName = document.getElementById('productName').value.trim();
         const productPrice = document.getElementById('productPrice').value.trim();
@@ -387,26 +397,29 @@
 
     }
 
-    // // Hàm mở modal Sửa và điền dữ liệu sản phẩm vào modal
-    // function editProduct(id, name, price) {
-    //     document.getElementById('editProductModalLabel').innerText = 'Sửa Sản Phẩm';
-    //     document.getElementById('editProductName').value = name;
-    //     document.getElementById('editProductPrice').value = price;
-    //     const modal = new bootstrap.Modal(document.getElementById('editProductModal'));
-    //     modal.show();
-    // }
-    //
-    //
-    //
-    // // Hàm cập nhật sản phẩm (sửa sản phẩm)
-    // function updateProduct() {
-    //     const name = document.getElementById('editProductName').value;
-    //     const price = document.getElementById('editProductPrice').value;
-    //     console.log('Cập nhật sản phẩm:', name, price);
-    //     // Logic cập nhật sản phẩm ở đây
-    //     const modal = bootstrap.Modal.getInstance(document.getElementById('editProductModal'));
-    //     modal.hide();
-    // }
+    // Hàm xóa sản phẩm
+    function deleteProduct(id) {
+        if (!confirm("Bạn có chắc chắn muốn xóa sản phẩm này không?")) return;
+
+        fetch('${pageContext.request.contextPath}/admin/deleteProduct', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'id=' + id
+        })
+            .then(res => res.text())
+            .then(msg => {
+                alert(msg);
+                location.reload();
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Có lỗi xảy ra');
+            });
+    }
+
+
 
     // Tính năng tìm kiếm sản phẩm
     document.getElementById('search').addEventListener('input', function(event) {
